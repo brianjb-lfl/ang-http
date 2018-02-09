@@ -19,7 +19,7 @@ export class AppComponent {
     const headers = new HttpHeaders({'Authorization':'Basic ' + b64Encoded});
     console.log(headers);
 
-    return this.http.post(loginUrl, { headers })
+    return this.http.post(loginUrl, {}, { headers })
       .subscribe(
         (response) => console.log(response),
         (error) => console.log(error)
